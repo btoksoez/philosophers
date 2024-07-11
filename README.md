@@ -1,3 +1,5 @@
+![Philosophers Diagram](./philosophers.jpg)
+
 # Philosophers
 The "Philosophers" project at 42 involves simulating the classic dining philosophers problem, where philosophers must alternately eat, think, and sleep without starving.
 
@@ -25,7 +27,7 @@ Run the program with the following arguments:
 - time_to_sleep (in milliseconds): Time a philosopher spends sleeping.
 - number_of_times_each_philosopher_must_eat (optional): The simulation stops if all philosophers have eaten this many times. If not specified, the simulation stops when a philosopher dies.
 
-## Tricky Things
+## Implementation Highlights
 - **Monitor Thread**: Implementing a monitor thread that runs an infinite loop, checking if any philosopher has died and setting the dead flag.
 - **Preventing Deadlocks**: Philosophers with even numbers take the right fork first, while those with odd numbers take the left fork first.
 - **Inaccurate usleep Function**: The standard C library usleep function is inaccurate and sleeps for different amounts of time depending on the hardware. A custom ft_usleep function was created to address this issue.
